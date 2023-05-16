@@ -1,0 +1,35 @@
+.mainCat{
+    width:100%;
+    text-align:left;
+    /* margin-left: 30px; */
+}
+.allCat select{
+    margin-left: 30px; 
+}
+.allCat{
+    font-size: 20px;
+    /* display: flex; */
+    text-align: center;
+
+    
+}
+.allCat select{
+    border:none; 
+    background-color:white;
+    font-size: 16px;
+    /* margin-top: 10px; */
+    color:rgb(1, 112, 185);
+    text-transform: uppercase;
+}
+.allCat li{
+    
+    list-style: none;
+    display: inline;
+    margin-left: 20px;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.allCat ul{
+    margin-top: 10px;
+}
