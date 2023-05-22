@@ -79,7 +79,7 @@ function AddCars(props) {
 
     return (
         <>
-            <Header label="Students" logo={studentsIcon} btnArray={btnArr} />
+            <Header label="Add cars" logo={studentsIcon} btnArray={btnArr} />
 
             <Box display={display}><Typography variant='h6' color='green'>Your data has been saved..</Typography></Box>
 

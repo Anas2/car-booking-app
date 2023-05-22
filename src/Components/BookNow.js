@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import BookingFrom from './BookingForm';
 import parse from 'html-react-parser';
 import NavBar from '../FComponents/navBar/navbar';
@@ -10,6 +10,13 @@ function BookNow(props) {
 
     const selectedData = useLocation().state;
     console.log(selectedData);
+    const navigate = useNavigate();
+    
+   useEffect(()=>{
+    if(selectedData == null){
+         navigate('/');
+     }
+   })
     return (
         <>
             <Box>
@@ -47,7 +54,7 @@ function BookNow(props) {
                                                     <td>{selectedData.model}</td>
                                                     <td>{selectedData.ac}</td>
                                                     <td>{selectedData.rent}</td>
-                                                    <td><Typography variant='span' sx={{ fontWeight: "normal" }} > {selectedData.availability == "Yes" ? "Yes" : "No"}</Typography></td>
+                                                    <td><Typography variant='span' sx={{ fontWeight: "normal" }} > {selectedData.availability === "Yes" ? "Yes" : "No"}</Typography></td>
                                                 </tr> : null
                                                 }
 
@@ -59,7 +66,7 @@ function BookNow(props) {
                             <Col sm={12} md={6}>
                                 <Box sx={{ textAlign: "center" }}> <h1 style={{ textTransform: "uppercase", fontSize: "30px" }}>Other Details</h1></Box>
                                 <Box>
-                                    <BookingFrom />
+                                {selectedData ? <BookingFrom /> : null}
                                 </Box>
 
                             </Col>

@@ -42,7 +42,7 @@ function NavBar() {
     }
   };
   const toLogin = ()=>{
-    navigate('login');
+    navigate('../login');
   }
 
   const getData = () => {

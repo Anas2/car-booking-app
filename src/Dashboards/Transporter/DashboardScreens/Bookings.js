@@ -16,9 +16,9 @@ function Bookings(props) {
     const [isLoading, setIsLoading] = useState(true);
     const navigate = useNavigate()
 
-    let approvedStudent = () => {
-        navigate('../add-cars');
-    }
+    // let approvedStudent = () => {
+    //     navigate('../add-cars');
+    // }
     let getData = () => {
         getDataFromDb('bookedCars').then((res) => {
             console.log(Object.values(res));
@@ -30,10 +30,10 @@ function Bookings(props) {
         })
     }
     const btnArr = [
-        {
-            displayName: "Booking",
-            func: approvedStudent
-        }
+        // {
+        //     displayName: "Booking",
+        //     func: approvedStudent
+        // }
     ]
 
     const cols = [

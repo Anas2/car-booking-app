@@ -62,7 +62,7 @@ function CarsDetails(props) {
     }
     let deleteById = () => {
         setDisplay(true)
-        deleteData("studentRegistrationFormData",model.id).then((res) => {
+        deleteData("cars",model.id).then((res) => {
             setDisplayStatus('block');
             model.visibility = false
             hidding();
